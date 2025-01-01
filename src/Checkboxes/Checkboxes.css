@@ -1,0 +1,12 @@
+.checkbox-container {
+    margin: 10px;
+}
+
+.checkbox-label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.checkbox {
+    cursor: pointer;
+}
