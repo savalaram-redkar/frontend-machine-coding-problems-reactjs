@@ -1,0 +1,25 @@
+.accordion-item {
+    margin: 10px;
+}
+
+.accordion-trigger {
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.accordion-trigger:focus {
+    outline: 2px solid black; /* Visible focus indicator */
+}
+
+.accordion-content {
+    padding: 10px;
+}
