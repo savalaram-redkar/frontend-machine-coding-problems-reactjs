@@ -1,4 +1,4 @@
-import Accordion from "./Accordion";
+import Accordion from "./problems/Accordion";
 
 function App ()
 {
