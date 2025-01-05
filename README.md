@@ -5,13 +5,16 @@ This repository contains solutions to various machine coding problems implemente
 
 ----------
 
+
 ## 🚀 Features
 
 -   **React Best Practices**: Code written with a focus on reusability, readability, and performance.
 -   **Component-Based Architecture**: Solutions are broken down into modular, reusable components.
 -   **State Management**: Demonstrates usage of React hooks (`useState`, `useEffect`) and props for efficient state management.
+-   **Storybook Integration**: Visualize and test each component in isolation using Storybook.
 
 ----------
+
 
 ## 🛠️ Installation
 
@@ -26,13 +29,23 @@ To run the solutions locally:
 3.  Install dependencies:
     ```bash
     yarn install
-4.  Start the development server:
+4.  Start Storybook:
     ```bash
-    yarn dev
-4.  Open your browser at `http://localhost:5173`.
+    yarn storybook
+4.  Open your browser at `http://localhost:6006` to view the components in isolation using Storybook.
     
+----------
+
+
+## 📖 Using Storybook
+With **Storybook**, you can:
+
+- Test and visualize each problem/component in isolation.
+- Easily interact with and inspect the behavior of each solution.
+- Adjust props dynamically to test different scenarios.
 
 ----------
+
 
 ## 🤝 Connect
 
