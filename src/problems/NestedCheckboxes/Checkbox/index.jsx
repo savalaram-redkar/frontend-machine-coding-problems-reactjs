@@ -1,12 +1,12 @@
-import './Checkboxes.css'
+import './Checkbox.css'
 import PropTypes from "prop-types"
 
-export default function Checkboxes ( { checkboxesData, handleCheckboxClick } )
+export default function Checkbox ( { checkboxes, handleCheckboxClick } )
 {
     return (
         <>
             {
-                checkboxesData?.length > 0 && checkboxesData?.map( ( checkbox ) =>
+                checkboxes?.length > 0 && checkboxes?.map( ( checkbox ) =>
                 {
                     return (
                         <div key={ checkbox.id } className="checkbox-container">
@@ -28,8 +28,8 @@ export default function Checkboxes ( { checkboxesData, handleCheckboxClick } )
                             <label htmlFor={ checkbox.id } className="checkbox-label">{ checkbox.name }</label>
                             {
                                 checkbox?.children && (
-                                    <Checkboxes
-                                        checkboxesData={ checkbox.children }
+                                    <Checkbox
+                                        checkboxes={ checkbox.children }
                                         handleCheckboxClick={ handleCheckboxClick }
                                     />
                                 )
@@ -42,8 +42,8 @@ export default function Checkboxes ( { checkboxesData, handleCheckboxClick } )
     )
 }
 
-Checkboxes.propTypes = {
-    checkboxesData: PropTypes.arrayOf( PropTypes.shape( {
+Checkbox.propTypes = {
+    checkboxes: PropTypes.arrayOf( PropTypes.shape( {
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         checked: PropTypes.oneOfType( [

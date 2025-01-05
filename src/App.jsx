@@ -1,27 +1,34 @@
-import Accordion from "./problems/Accordion";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App ()
 {
-  const accordionData = [
-    {
-      title: "How many bones does a cat have?",
-      content: "A cat has 230 bones - 6 more than a human",
-    },
-    {
-      title: "How much do cats sleep?",
-      content: "The average cat sleeps 12-16 hours per day",
-    },
-    {
-      title: "How long do cats live",
-      content: "Outdoor cats live 5 years on average. Indoor\ncats live 15 years on average.",
-    },
-  ]
+  const [ count, setCount ] = useState( 0 )
 
   return (
     <>
-      { accordionData?.length > 0 && accordionData.map( ( { title, content } ) => (
-        <Accordion key={ title } title={ title } content={ content } />
-      ) ) }
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={ viteLogo } className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={ reactLogo } className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={ () => setCount( ( count ) => count + 1 ) }>
+          count is { count }
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
